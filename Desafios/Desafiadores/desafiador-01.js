@@ -18,6 +18,13 @@ Caso contrário:
 
 function cnhProcess(name, birthYear){
   // Desenvolva seu código nessa função
+  let actualYear = 2023;
+  let age = actualYear - birthYear;
+  if (age < 18) {
+    return `${name} tem ${age} anos de idade e não pode iniciar o processo.`;
+  } else {
+    return `${name} tem ${age} anos de idade e pode iniciar o processo.`;
+  }
 }
 
 module.exports = cnhProcess;

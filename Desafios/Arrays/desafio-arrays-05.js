@@ -18,7 +18,21 @@ A saída deve ter o seguinte formato:
 
 function findOldestSon(pedroAge, kidsAge){
   // Desenvolva seu código aqui.
-  return // Retorne o resultado aqui
+  let message = "O filho mais velho tem "
+  let ageOfAllKids = 0;
+  let oldestSonAgeVerify = kidsAge[0];
+  for (let i = 0; i < kidsAge.length; i += 1){
+    
+    if (oldestSonAgeVerify < kidsAge[i]) {
+      oldestSonAgeVerify = kidsAge[i];
+    }
+    ageOfAllKids = kidsAge[i] + ageOfAllKids;
+  }
+  let oldestSonAge = pedroAge - ageOfAllKids;
+  if (oldestSonAge <= oldestSonAgeVerify) {
+    oldestSonAge = oldestSonAgeVerify;
+  }
+  return message + oldestSonAge + " anos."; // Retorne o resultado aqui
 }
 
 module.exports = findOldestSon;

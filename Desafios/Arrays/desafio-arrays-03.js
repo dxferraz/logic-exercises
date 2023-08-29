@@ -16,9 +16,24 @@ Caso o contrário:
 
 */
 
-function findGuest(names, guest){
+function findGuest(names, guest) {
   // Desenvolva seu código nessa função
-  return // Retorne o resultado aqui
+  let nameVerified = false;
+  let message = "";
+
+  for (let i = 0; i < names.length; i = i + 1) {
+    if (names[i].toUpperCase() == guest.toUpperCase()) {
+      nameVerified = true;
+    }
+  }
+
+  if (nameVerified == true) {
+    message = "O nome está na lista.";
+  } else {
+    message = "O nome não está na lista.";
+  }
+
+  return message; // Retorne o resultado aqui
 }
 
 module.exports = findGuest;

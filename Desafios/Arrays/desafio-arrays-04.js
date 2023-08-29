@@ -20,7 +20,15 @@ Obs: Os retornos tem que ser dados do tipo boolean.
 
 function dataType(types){
   // Desenvolva seu código aqui.
-  return // Retorne o resultado aqui
+  const typeOfFirst = typeof types[0];
+
+  for (let elements of types) {
+    if (typeOfFirst !== typeof elements) {
+      return false;
+    }
+  }
+  
+  return true;
 }
 
 module.exports = dataType;
